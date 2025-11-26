@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juego de Preguntas</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="pantalla-inicio" class="card active">
+        <h1>Juego de Preguntas</h1>
+        <p>Responde preguntas rápidas. ¡Buena suerte!</p>
+        <label class="config">
+          Número de preguntas:
+          <select id="select-cantidad" aria-label="Número de preguntas">
+            <option value="5">5</option>
+            <option value="8">8</option>
+            <option value="10" selected>10</option>
+          </select>
+        </label>
+        <button id="btn-comenzar" class="btn primario">Comenzar</button>
+      </section>
+
+      <section id="pantalla-quiz" class="card" aria-live="polite">
+        <div class="encabezado">
+          <div id="progreso" class="progreso">Pregunta 1/10</div>
+          <div id="puntaje" class="puntaje">Puntos: 0</div>
+        </div>
+        <h2 id="texto-pregunta" class="pregunta">Pregunta aquí</h2>
+        <div id="opciones" class="opciones" role="list"></div>
+        <div class="acciones">
+          <button id="btn-siguiente" class="btn" disabled>Siguiente</button>
+        </div>
+      </section>
+
+      <section id="pantalla-resultado" class="card">
+        <h2>Resultados</h2>
+        <div id="mensaje-final" class="mensaje-final" aria-live="polite"></div>
+        <p id="resumen"></p>
+        <div class="acciones">
+          <button id="btn-reintentar" class="btn">Reintentar</button>
+          <button id="btn-volver" class="btn secundario">Volver al inicio</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <small>PRUEBA TUS CONOCIMIENTOS!!!</small>
+    </footer>
+
+    <script src="./javascript/app.js"></script>
+  </body>
+</html>
